@@ -10,7 +10,7 @@ const Sens = 0.002
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED) 
 
-func _unhandled_input(event: InputEvent):
+func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * Sens)
 		camera.rotate_x(-event.relative.y * Sens)
